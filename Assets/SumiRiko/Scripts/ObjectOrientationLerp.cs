@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Socket : MonoBehaviour
+public class ObjectOrientationLerp : MonoBehaviour
 {
     public Transform objectToInsert;
-    public float minAngle = -45f;
-    public float maxAngle = 45f;
+    public float minAngle = -25f;
+    public float maxAngle = 25f;
     public float tolerance = 10f;
 
     private Quaternion initialRotation;
