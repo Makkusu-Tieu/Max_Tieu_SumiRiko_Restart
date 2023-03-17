@@ -15,7 +15,7 @@ public class ObjectOrientationLerp : MonoBehaviour
     void Start()
     {
         initialRotation = objectToInsert.rotation;
-        targetRotation = Quaternion.Euler(0f, 0f, minAngle);
+        targetRotation = Quaternion.Euler(270f, 0f, minAngle);
     }
 
     void Update()
