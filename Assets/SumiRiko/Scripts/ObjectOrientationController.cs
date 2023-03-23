@@ -22,11 +22,13 @@ public class ObjectOrientationController : MonoBehaviour
             && objectRotation.z >= minZAngle && objectRotation.z <= maxZAngle)
         {
             socket.SetActive(true);
+            Debug.Log("Object is in correct orientation");
             // Remove any feedback mechanisms (e.g., stop highlighting the object)
         }
         else
         {
             socket.SetActive(false);
+            Debug.Log("Object is not in correct orientation");
             // Add feedback mechanisms (e.g., highlight the object in red)
         }
     }
