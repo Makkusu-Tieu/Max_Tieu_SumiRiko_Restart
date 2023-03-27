@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class ObjectOrientationController : MonoBehaviour
 {
-    public float minXAngle = 0f;
+    public float minXAngle = -90f;
     public float maxXAngle = 90f;
-    public float minYAngle = 0f;
+    public float minYAngle = -90f;
     public float maxYAngle = 90f;
-    public float minZAngle = 0f;
+    public float minZAngle = -90f;
     public float maxZAngle = 90f;
 
     public GameObject socket;
 
     private void Update()
     {
+        Debug.Log("X Rotation is" + transform.eulerAngles.x);
+
         Vector3 objectRotation = transform.rotation.eulerAngles;
 
-        if (objectRotation.x >= minXAngle && objectRotation.x <= maxXAngle
-            && objectRotation.y >= minYAngle && objectRotation.y <= maxYAngle
-            && objectRotation.z >= minZAngle && objectRotation.z <= maxZAngle)
+        if (objectRotation.x >= minXAngle && objectRotation.x <= maxXAngle)
+            //&& objectRotation.y >= minYAngle && objectRotation.y <= maxYAngle
+            //&& objectRotation.z >= minZAngle && objectRotation.z <= maxZAngle)
         {
             socket.SetActive(true);
             Debug.Log("Object is in correct orientation");
