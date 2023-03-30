@@ -10,6 +10,8 @@ public class ObjectOrientationController : MonoBehaviour
     public float maxYAngle = 90f;
     //public float minZAngle = -90f;
     //public float maxZAngle = 90f;
+    
+    //For ranges that are only postive (example 0-90)
 
     public float minXAngle2 = -90f;
     public float maxXAngle2 = 90f;
@@ -17,13 +19,17 @@ public class ObjectOrientationController : MonoBehaviour
     public float maxYAngle2 = 90f;
     //public float minZAngle2 = -90f;
     //public float maxZAngle2 = 90f;
+    
+    //Enable only if your range goes from negative and postive (example 270-90)
+    //For the example above, enable second set of variables and set one to (270-360) and another to (0-90)
 
     public GameObject socket;
 
     private void Update()
     {
-        Debug.Log("X Rotation is" + transform.eulerAngles.x);
-        //Debug.Log("Y Rotation is" + transform.eulerAngles.y);
+        //Debug.Log("X Rotation is" + transform.eulerAngles.x);
+        Debug.Log("Y Rotation is" + transform.eulerAngles.y);
+        //Enable Each One at a Time to Figure Out Ranges
 
         Vector3 objectRotation = transform.rotation.eulerAngles;
 
