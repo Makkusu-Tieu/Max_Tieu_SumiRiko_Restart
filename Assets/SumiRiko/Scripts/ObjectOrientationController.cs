@@ -8,13 +8,13 @@ public class ObjectOrientationController : MonoBehaviour
     public float maxXAngle = 90f;
     public float minYAngle = -90f;
     public float maxYAngle = 90f;
-    public float minZAngle = -90f;
-    public float maxZAngle = 90f;
+    //public float minZAngle = -90f;
+    //public float maxZAngle = 90f;
 
-    //public float minXAngle2 = -90f;
-    //public float maxXAngle2 = 90f;
-    //public float minYAngle2 = -90f;
-    //public float maxYAngle2 = 90f;
+    public float minXAngle2 = -90f;
+    public float maxXAngle2 = 90f;
+    public float minYAngle2 = -90f;
+    public float maxYAngle2 = 90f;
     //public float minZAngle2 = -90f;
     //public float maxZAngle2 = 90f;
 
@@ -22,12 +22,13 @@ public class ObjectOrientationController : MonoBehaviour
 
     private void Update()
     {
-        //Debug.Log("X Rotation is" + transform.eulerAngles.x);
-        Debug.Log("Y Rotation is" + transform.eulerAngles.y);
+        Debug.Log("X Rotation is" + transform.eulerAngles.x);
+        //Debug.Log("Y Rotation is" + transform.eulerAngles.y);
 
         Vector3 objectRotation = transform.rotation.eulerAngles;
 
-        if (/*objectRotation.x >= minXAngle && objectRotation.x <= maxXAngle &&*/ objectRotation.y >= minYAngle && objectRotation.y <= maxYAngle)
+        if ((objectRotation.y >= minYAngle && objectRotation.y <= maxYAngle) || (objectRotation.y >= minYAngle2 && objectRotation.y <= maxYAngle2) &&
+            (objectRotation.y >= minYAngle && objectRotation.y <= maxYAngle) || (objectRotation.y >= minYAngle2 && objectRotation.y <= maxYAngle2))
             //&& objectRotation.z >= minZAngle && objectRotation.z <= maxZAngle)
         {
             socket.SetActive(true);
