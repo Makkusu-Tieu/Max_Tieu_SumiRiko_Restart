@@ -30,6 +30,9 @@ public class ObjectOrientationController : MonoBehaviour
     //Enable only if your range goes from negative and postive (example 270-90)
     //For the example above, enable second set of variables and set one to (270-360) and another to (0-90)
 
+    //[SerializeField] XRBaseController controller; 
+    //Haptic Feedback (In Progress)
+
     public GameObject socket;
 
     private void Update()
@@ -51,12 +54,16 @@ public class ObjectOrientationController : MonoBehaviour
         {
             socket.SetActive(true);
             Debug.Log("Object is in correct orientation");
+            
+            //controller.SendHapticImpulse(0.7f, 0.2f);
             // Things that Happen When It is In Range
         }
         else
         {
             socket.SetActive(false);
             Debug.Log("Object is not in correct orientation");
+
+
             // Things that Happen When It is Not In Range
         }
     }
