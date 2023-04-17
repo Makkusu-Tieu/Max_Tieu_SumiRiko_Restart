@@ -29,6 +29,10 @@ public class ObjectOrientationController : MonoBehaviour
 
     //Enable only if your range goes from negative and postive (example 270-90)
     //For the example above, enable second set of variables and set one to (270-360) and another to (0-90)
+    //Otherwise Comment Out Sections to Avoid Unnessary Variables
+
+    public Material materialInRange;
+    public Material materialNotInRange;
 
     //[SerializeField] XRBaseController controller; 
     //Haptic Feedback (In Progress)
@@ -50,19 +54,27 @@ public class ObjectOrientationController : MonoBehaviour
             ((objectRotation.y >= minYAngle && objectRotation.y <= maxYAngle) || (objectRotation.y >= minYAngle2 && objectRotation.y <= maxYAngle2))
             &&
             ((objectRotation.z >= minZAngle && objectRotation.z <= maxZAngle) || (objectRotation.z >= minZAngle2 && objectRotation.z <= maxZAngle2)))
-            //&& objectRotation.z >= minZAngle && objectRotation.z <= maxZAngle)
         {
             socket.SetActive(true);
             Debug.Log("Object is in correct orientation");
-            
-            //controller.SendHapticImpulse(0.7f, 0.2f);
+            //Sets Socket to True, Thus Object is Insertable
+
+            GetComponent<Renderer>().material = materialInRange;
+            //Changes Color of Object to Inserted Color in Inspector for Material In Range
+
+            //controller.SendHapticImpulse(0.7f, 0.2f); (Not Working)
+            //Haptic Feedback When In Range
+
             // Things that Happen When It is In Range
         }
         else
         {
             socket.SetActive(false);
             Debug.Log("Object is not in correct orientation");
+            //Sets Socket to False, Thus Object in Uninsertable
 
+            GetComponent<Renderer>().material = materialNotInRange;
+            //Changes Color of Object to Inserted Color in Inspector for Material Not In Range
 
             // Things that Happen When It is Not In Range
         }
