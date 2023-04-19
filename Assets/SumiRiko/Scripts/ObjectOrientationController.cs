@@ -38,6 +38,9 @@ public class ObjectOrientationController : MonoBehaviour
     //Haptic Feedback (In Progress)
 
     public GameObject socket;
+    public GameObject sphereIndicator;
+
+    //Make a Sphere as a LED Indicator to Help Show if Orientation is Correct
 
     private void Update()
     {
@@ -59,8 +62,8 @@ public class ObjectOrientationController : MonoBehaviour
             Debug.Log("Object is in correct orientation");
             //Sets Socket to True, Thus Object is Insertable
 
-            GetComponent<Renderer>().material = materialInRange;
-            //Changes Color of Object to Inserted Color in Inspector for Material In Range
+            sphereIndicator.GetComponent<MeshRenderer>().material = materialInRange;
+            //Changes Color of LED Light to Inserted Color in Inspector for Material In Range
 
             //controller.SendHapticImpulse(0.7f, 0.2f); (Not Working)
             //Haptic Feedback When In Range
@@ -73,8 +76,8 @@ public class ObjectOrientationController : MonoBehaviour
             Debug.Log("Object is not in correct orientation");
             //Sets Socket to False, Thus Object in Uninsertable
 
-            GetComponent<Renderer>().material = materialNotInRange;
-            //Changes Color of Object to Inserted Color in Inspector for Material Not In Range
+            sphereIndicator.GetComponent<MeshRenderer>().material = materialNotInRange;
+            //Changes Color of LED Light to Inserted Color in Inspector for Material Not In Range
 
             // Things that Happen When It is Not In Range
         }
