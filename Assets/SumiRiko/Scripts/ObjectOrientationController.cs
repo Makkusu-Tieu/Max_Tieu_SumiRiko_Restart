@@ -17,12 +17,13 @@ public class ObjectOrientationController : MonoBehaviour
     public float maxZAngle = 90f;
 
     //For ranges that are only postive (example 0-90)
+    //Additional Tip that May Help, Try (-1,90) if Object Is Jittering in Socket, May Be Because Between 0-90, 0 is Not Between the Range, so -1 will Include 0 as a Value
 
     public float minXAngle2 = 0f;
     public float maxXAngle2 = 90f;
 
-    public float minYAngle2 = 0f;
-    public float maxYAngle2 = 90f;
+    //public float minYAngle2 = 0f;
+    //public float maxYAngle2 = 90f;
 
     public float minZAngle2 = 0f;
     public float maxZAngle2 = 90f;
@@ -54,7 +55,7 @@ public class ObjectOrientationController : MonoBehaviour
 
         if (((objectRotation.x >= minXAngle && objectRotation.x <= maxXAngle) || (objectRotation.x >= minXAngle2 && objectRotation.x <= maxXAngle2))
             &&
-            ((objectRotation.y >= minYAngle && objectRotation.y <= maxYAngle) || (objectRotation.y >= minYAngle2 && objectRotation.y <= maxYAngle2))
+            ((objectRotation.y >= minYAngle && objectRotation.y <= maxYAngle) /*|| (objectRotation.y >= minYAngle2 && objectRotation.y <= maxYAngle2)*/)
             &&
             ((objectRotation.z >= minZAngle && objectRotation.z <= maxZAngle) || (objectRotation.z >= minZAngle2 && objectRotation.z <= maxZAngle2)))
         {
