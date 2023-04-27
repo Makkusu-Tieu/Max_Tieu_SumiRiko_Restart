@@ -35,9 +35,6 @@ public class ObjectOrientationController : MonoBehaviour
     public Material materialInRange;
     public Material materialNotInRange;
 
-    //[SerializeField] XRBaseController controller; 
-    //Haptic Feedback (In Progress)
-
     public GameObject socket;
     public GameObject sphereIndicator;
 
@@ -65,9 +62,6 @@ public class ObjectOrientationController : MonoBehaviour
 
             sphereIndicator.GetComponent<MeshRenderer>().material = materialInRange;
             //Changes Color of LED Light to Inserted Color in Inspector for Material In Range
-
-            //controller.SendHapticImpulse(0.7f, 0.2f); (Not Working)
-            //Haptic Feedback When In Range
 
             // Things that Happen When It is In Range
         }
