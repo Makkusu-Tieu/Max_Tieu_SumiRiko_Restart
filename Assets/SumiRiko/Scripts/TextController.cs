@@ -18,4 +18,12 @@ public class TextController : MonoBehaviour
     {
         
     }
+
+    //public void UIFeedback()
+    //{
+    //    if (inRange.GetComponent<ObjectOrientationController>().inRange = false)
+    //    {
+
+    //    }
+    //}
 }
