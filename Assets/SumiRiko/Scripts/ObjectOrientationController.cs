@@ -40,8 +40,6 @@ public class ObjectOrientationController : MonoBehaviour
 
     //Make a Sphere as a LED Indicator to Help Show if Orientation is Correct
 
-    public bool inRange;
-
     public void Update()
     {
         //Debug.Log("X Rotation is" + transform.eulerAngles.x);
@@ -65,8 +63,6 @@ public class ObjectOrientationController : MonoBehaviour
             sphereIndicator.GetComponent<MeshRenderer>().material = materialInRange;
             //Changes Color of LED Light to Inserted Color in Inspector for Material In Range
 
-            inRange = true;
-
             // Things that Happen When It is In Range
         }
         else
@@ -78,7 +74,6 @@ public class ObjectOrientationController : MonoBehaviour
             sphereIndicator.GetComponent<MeshRenderer>().material = materialNotInRange;
             //Changes Color of LED Light to Inserted Color in Inspector for Material Not In Range
 
-            inRange = false;
 
             // Things that Happen When It is Not In Range
         }
