@@ -5,15 +5,14 @@ using TMPro;
 
 public class TextController : MonoBehaviour
 {
-    private TextMeshProUGUI errorRemoveDebris;
+    private TextMeshProUGUI feedback;
     
     public GameObject debris;
-    public GameObject feedback;
 
     // Start is called before the first frame update
     void Start()
     {
-        errorRemoveDebris = GetComponent<TextMeshProUGUI>();
+        feedback = GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
@@ -21,7 +20,11 @@ public class TextController : MonoBehaviour
     {
         if (debris.gameObject.CompareTag("Debris"))
         {
-            errorRemoveDebris.text = "Please Remove Debris Before Entering Object Into Socket";
+            feedback.text = "Please Remove Debris Before Entering Object Into Socket";
+        }
+        else
+        {
+            feedback.text = "Insert the Object Into the Socket";
         }
     }
 }
