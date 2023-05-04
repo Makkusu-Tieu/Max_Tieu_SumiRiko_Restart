@@ -18,7 +18,7 @@ public class TextController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (debris.gameObject.CompareTag("Debris"))
+        if (debris.activeSelf)
         {
             feedback.text = "Please Remove Debris Before Entering Object Into Socket";
         }

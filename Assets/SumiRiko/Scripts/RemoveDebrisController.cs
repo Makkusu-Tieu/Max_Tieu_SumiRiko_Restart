@@ -22,7 +22,7 @@ public class RemoveDebrisController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Debris"))
         {
-            Destroy(other.gameObject);
+            debris.SetActive(false);
         }
     }
 }
