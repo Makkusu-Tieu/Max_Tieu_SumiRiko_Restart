@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ObjectOrientationController : MonoBehaviour
 {
-    //ATTACH THIS SCRIPT TO THE OBJECT, NOT THE SOCKET
-    //INSERT SOCKET INTO PUBLIC GAME OBJECT IN THE INSPECTOR
+    //Attch this script to the OBJECT/PART, NOT the SOCKET
+    //Insert Socket into Public Game Object in the Inspector
 
     public float minXAngle = 0f;
     public float maxXAngle = 90f;

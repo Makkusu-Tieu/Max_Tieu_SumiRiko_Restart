@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TrashBinController : MonoBehaviour
 {
+    //Attach This Script to the TRASH BIN
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +24,7 @@ public class TrashBinController : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
+
+        //For "Trash" or Unusable Part, Make Sure to Have Tag Set to "Trash"
     }
 }
