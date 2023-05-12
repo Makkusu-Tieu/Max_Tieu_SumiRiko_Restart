@@ -5,17 +5,25 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class PopUpController : MonoBehaviour
 {
-    XRSocketInteractor socket;
+    public GameObject popup;
 
     // Start is called before the first frame update
     void Start()
     {
-        socket = GetComponent<XRSocketInteractor>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Part"))
+        {
+            popup.SetActive(true);
+        }
     }
 }

@@ -57,7 +57,7 @@ public class ObjectOrientationController : MonoBehaviour
             ((objectRotation.z >= minZAngle && objectRotation.z <= maxZAngle) || (objectRotation.z >= minZAngle2 && objectRotation.z <= maxZAngle2)))
         {
             socket.SetActive(true);
-            Debug.Log("Object is in correct orientation");
+            //Debug.Log("Object is in correct orientation");
             //Sets Socket to True, Thus Object is Insertable
 
             sphereIndicator.GetComponent<MeshRenderer>().material = materialInRange;
@@ -68,7 +68,7 @@ public class ObjectOrientationController : MonoBehaviour
         else
         {
             socket.SetActive(false);
-            Debug.Log("Object is not in correct orientation");
+            //Debug.Log("Object is not in correct orientation");
             //Sets Socket to False, Thus Object in Uninsertable
 
             sphereIndicator.GetComponent<MeshRenderer>().material = materialNotInRange;

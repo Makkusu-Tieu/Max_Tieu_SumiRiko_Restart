@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Debris
   - Trash
+  - Part
   layers:
   - Default
   - TransparentFX
